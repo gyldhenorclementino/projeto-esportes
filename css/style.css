@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.conteiner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
+}
+
+.header {
+    background-color: #292929;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 8px 15px;
+    text-decoration: none;
+}
+
+.logo-header {
+    width: 180px;
+}
+
+.menu-nav {
+    display: flex;
+    gap: 15px; 
+}
+
+.bottom-nav {
+    font-family: 'Sarala', sans-serif;
+    font-size: 16px;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.bottom-nav:hover {
+    border-bottom: 2px solid #000;
+}
+
+.title-header {
+    font-family:'Sarala', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.description-header {
+    font-family:'Sarala', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #383838;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "card-article card-aside";
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+.card-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    grid-area: "card-article";
+}
+
+.item-article {
+    width: 280px;
+    height: 380px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.item-article:hover {
+    border-color: #000;
+}
+
+.imgcard {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.title-item-article {
+    font-family: 'Sarala', sans-serif;
+    padding: 6px;
+}
+
+.description-item-article {
+    font-family: 'Sarala', sans-serif;
+    padding: 6px;
+    text-align: justify;
+}
+
+.card-aside {
+    background-color: #383838;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    grid-area: "card-aside";
+    gap: 20px;
+}
+
+.item-aside {
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.item-aside:hover {
+    border-color: gainsboro;
+}
+
+.img-aside {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.title-aside {
+    font-family: 'Sarala', sans-serif;
+    text-align: center;
+}
+
+.title-item-aside {
+    font-family: 'Sarala', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer {
+    font-family: 'Sarala', sans-serif;
+    width: 100%;
+    min-height: 40px;
+    background-color: #292929;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    gap: 15px;
+}
+
+.logo-footer {
+    width: 180px;
+    
+}
+
+.link-footer {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.link-footer:hover {
+    border-bottom: 2px solid #000;
+    
+}
+
+@media(max-width: 630px) {
+    .main {
+        grid-template-areas: 
+        "card-article"
+        "card-aside";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .card-aside {
+        min-width: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .link-footer {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 463px) {
+    .header {
+        justify-content: center;
+    }
+
+}
